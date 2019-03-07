@@ -8,7 +8,7 @@
 	<div id="Cabecalho"></div>
 	<div id="Banner">
 		<!-- Inserir a figura do banner -->
-	</div>
+	</div><!--fim div banner -->
 	<div id="Menu"> 
 		<ul>
 			<li><a href="index.html">Home</a></li>
@@ -16,7 +16,7 @@
 			<li><a href="#">Categorias de Receitas</a></li>
 			<li><a href="#">Contato</a></li>
 		</ul>
-	</div>
+	</div><!--fim div menu -->
 	<div id="Pesquisa">
 		<p id="Redes-Sociais">
 			<img src="img/face.png"/>
@@ -31,9 +31,12 @@
 			<input type="image" name="lupa" alt="Pesquisa" src="img/search.png"/>
 
 		</p>
-	
-	<div id="Corpo"></div>
+	</div>
+
+
+	<div id="Corpo">
 		<h1>Nova Receita </h1>
+		<form action="Salvar.jsp" method="post">
 		<p><label for="nome">Nome da Receita:
 		<input type="text" name="nome" id="nome" placeholder="Digite o nome da Receita" size="25" />
 		</label><p>
@@ -102,11 +105,71 @@
 		<label for="descrição">Descrição da receita:
 			<textarea id="Descriçao" name="Descriçao" placeholder="Digite uma pequena descrição sobre a receita" cols="50" rows="10"></textarea>
 		</label>
-		
-
 	</p>
 
-</div>
+<p>
+	Dificuldade:
+	<input id= "facil" type="radio" name="Dificuldade" value="f" />
+	<label for="facil">Fácil</label>
+	<input id= "medio" type="radio" name="Dificuldade" value="m" />
+	<label for="medio">Médio</label>
+	<input id= "Dificil" type="radio" name="Dificuldade" value="d"/>
+	<label id= "Dificil">Dificil</label>
+</p>
+
+<p>
+
+	Tempo de Preparo: <input type="number" name="tempo-preparo" />
+	<select name="unidade-tempo">
+		<option value="min">Minutos</option>
+		<option value="h">Horas</option>
+		<option value="d">Dias</option>
+	</select>
+</p>
+<p>
+	Rendimentos:<input type="nunber" name="Rendimentos" min="1" max="100" />
+	Porções
+</p>
+<p>
+	<table>
+		<tr>
+			<td>
+				<label>
+					<input type="Checkbox" name="Acompanhamento" value="Arroz" />
+					Arroz
+				</label>
+			</td>
+			<td>
+				<label>
+					<input type="Checkbox" name="Acompanhamento" value="feijão" />
+					Feijão
+				</label>
+			</td>
+			<td>
+				<label>
+					<input type="Checkbox" name="Acompanhamento" value="Fritas" />
+					Batata Frita
+				</label>
+			</td>
+			<td>
+				<label>
+					<input type="Checkbox" name="Acompanhamento" value="Salada" />
+					Salada
+				</label>
+			</td>
+			<td>
+				<label>
+					<input type="Checkbox" name="Acompanhamento" value="pure" />
+					Pure de Batata
+				</label>
+			</td>
+		</tr>
+	</table>
+</p>
+
+<p>
+<input type="submit" value="Salvar Receita">
+</div><!--fim div corpo-->
 
 
 			
